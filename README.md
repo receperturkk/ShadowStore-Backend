@@ -15,4 +15,5 @@ Verdiğim database.sql dosyasının içindeki tüm kodları kopyalıyp açtığ�
 ![image](https://github.com/receperturkk/ShadowStore-Backend/assets/104844949/9ca6bbcf-8086-4e1a-8c18-6d9039cd01fd)
 ### 4.Adım
 Query sonucu:
+
 ![image](https://github.com/receperturkk/ShadowStore-Backend/assets/104844949/daa842fa-c926-4829-a0e2-6056777dc3d9)
