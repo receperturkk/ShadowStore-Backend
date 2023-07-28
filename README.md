@@ -1,6 +1,8 @@
 # ShadowStore-Backend
 Bu projede veritabanı bağlantısı ADO.NET ile yapılmıştır.Veritabanı işlemleri ekleme, çıkarma ve güncellemeler store procedure üzerinden gerçekleşmektedir.
+
 Api'yi publish klasöründeki exe ile çalıştırabilirsiniz öbür türlü frontend apiye port uymadığı için bağlanamaz.(port:5001)
+
 Veritabanı kurulum için local SQL Server'da "shadowStore" adında bir database oluşturup verdiğim dosyadaki sorguyu çalıştırmanız yeterli olucaktır.
 ## Veritabanı kurulumu
 ### 1.Adım
