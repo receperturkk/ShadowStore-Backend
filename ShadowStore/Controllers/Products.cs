@@ -9,7 +9,7 @@ namespace ShadowStore.Controllers
     public class Products : ControllerBase
     {
 
-        private readonly string connectionString = "Data Source=DESKTOP-EN6Q2PK;Initial Catalog=shadowStore;Integrated Security=True;TrustServerCertificate=true;";
+        private readonly string connectionString = "Data Source=localhsot;Initial Catalog=shadowStore;Integrated Security=True;TrustServerCertificate=true;";
 
 
         [HttpGet(Name = "Product")]
@@ -28,9 +28,9 @@ namespace ShadowStore.Controllers
 
                 while (reader.Read())
                 {
-                    int id = Convert.ToInt32(reader["ürünÝd"]);
-                    string title = reader["ürünTitle"].ToString();
-                    double price = Convert.ToDouble(reader["ürünPrice"]);
+                    int id = Convert.ToInt32(reader["Ã¼rÃ¼nÃd"]);
+                    string title = reader["Ã¼rÃ¼nTitle"].ToString();
+                    double price = Convert.ToDouble(reader["Ã¼rÃ¼nPrice"]);
 
                     ShadowStore.Product product = new ShadowStore.Product
                     {
@@ -77,7 +77,7 @@ namespace ShadowStore.Controllers
                 {
                     CommandType= CommandType.StoredProcedure
                 };
-                command.Parameters.AddWithValue("@üid", id);
+                command.Parameters.AddWithValue("@Ã¼id", id);
                 int rowsAffected = command.ExecuteNonQuery();
 
                 if (rowsAffected>0)
@@ -105,7 +105,7 @@ namespace ShadowStore.Controllers
                 command.Parameters.AddWithValue("@newTitle", (string)productDTO.title);
                 command.Parameters.AddWithValue("@newPrice", (float)productDTO.price);
 
-                // Diðer gerekli parametreler...
+                // DiÃ°er gerekli parametreler...
 
                 int rowsAffected = command.ExecuteNonQuery();
 
@@ -115,7 +115,7 @@ namespace ShadowStore.Controllers
                 }
                 else
                 {
-                    return BadRequest("Ürün oluþturulamadý.");
+                    return BadRequest("ÃœrÃ¼n oluÃ¾turulamadÃ½.");
                 }
             }
         }
